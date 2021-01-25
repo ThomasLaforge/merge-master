@@ -4,7 +4,7 @@ import MyHero from '../modules/Hero'
 import '../styles/hero.scss'
 
 const getHeroClassName = (type: HeroType) => {
-    return 'hero-' + getHeroName(type).replace(' ', '-')
+    return 'hero-' + getHeroName(type).replaceAll(' ', '-')
 }
 
 const getHeroName = (type: HeroType) => {
