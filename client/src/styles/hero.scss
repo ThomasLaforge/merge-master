@@ -1,0 +1,25 @@
+.hero {
+    $heroBox_dimension: 100px;
+    width: $heroBox_dimension;
+    height: $heroBox_dimension;
+    border-radius: $heroBox_dimension / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .hero-level {
+        height: $heroBox_dimension / 3;
+        width: 100%;
+        text-align: center;
+        font-size: $heroBox_dimension / 4;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.hero-ninja { background-color: purple; }
+.hero-archer { background-color: brown; }
+.hero-tourdedefense { background-color: grey; }
+.hero-cuisinier { background-color: lightskyblue;}
+.hero-militaire { background-color: darkolivegreen;}
+.hero-paysan { background-color: lightgreen;}
