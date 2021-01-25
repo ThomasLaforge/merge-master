@@ -40,7 +40,7 @@ export default function Hero(props: HeroProps){
         <div className="hero-name">
             {getHeroName(id)}
         </div>
-        {level && 
+        {(level || level === 0) && 
             <div className="hero-level">{level}</div>
         }
     </div>
