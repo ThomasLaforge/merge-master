@@ -1,4 +1,3 @@
-import { HeroData } from "../modules/UI"
 import {db} from '../index'
 // import MyHero from "../modules/Hero"
 import Hero from './Hero'
