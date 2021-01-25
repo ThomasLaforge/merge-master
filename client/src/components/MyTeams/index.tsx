@@ -1,5 +1,5 @@
-import { CompoData } from "../modules/definitions"
-import {Compo, EmptyComp} from "./Compo"
+import { CompoData } from "../../modules/definitions"
+import {Compo, EmptyComp} from "../Compo/index"
 import {useState} from "react"
 
 export default function MyTeams(){

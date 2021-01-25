@@ -1,7 +1,7 @@
-import {HeroType} from '../modules/definitions'
-import MyHero from '../modules/Hero'
+import {HeroType} from '../../modules/definitions'
+import MyHero from '../../modules/Hero'
 
-import '../styles/hero.scss'
+import './style.scss'
 
 const getHeroClassName = (type: HeroType) => {
     return 'hero-' + getHeroName(type).replaceAll(' ', '-')

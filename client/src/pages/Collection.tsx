@@ -1,5 +1,5 @@
-import MyTeams from '../components/MyTeams'
-import HeroesList from '../components/HeroesList'
+import MyTeams from '../components/MyTeams/index'
+import HeroesList from '../components/HeroesList/index'
 
 export default function Collection(){
     return (

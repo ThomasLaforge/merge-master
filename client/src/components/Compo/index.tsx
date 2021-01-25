@@ -1,4 +1,4 @@
-import { CompoData } from "../modules/definitions";
+import { CompoData } from "../../modules/definitions";
 
 interface Props {
     data: CompoData

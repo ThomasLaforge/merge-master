@@ -1,7 +1,7 @@
-import {db} from '../index'
+import {db} from '../../index'
 // import MyHero from "../modules/Hero"
-import Hero from './Hero'
-import {getAllHeroes, HeroType} from '../modules/definitions'
+import Hero from '../Hero/index'
+import {getAllHeroes, HeroType} from '../../modules/definitions'
 
 const heroes = getAllHeroes()
 
