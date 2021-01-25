@@ -14,7 +14,7 @@ export default class Database {
             hero.number += amount
         }
         else {
-            newHeroes.push({ id, number: amount })
+            newHeroes.push({ id: type, number: amount })
         }
         this.setElement('myHeroes', JSON.stringify(newHeroes))
     }
