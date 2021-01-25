@@ -7,6 +7,10 @@
     flex-direction: column;
     justify-content: flex-end;
 
+    .hero-name {
+        height: $heroBox_dimension / 2;
+        text-align: center;
+    }
     .hero-level {
         height: $heroBox_dimension / 3;
         width: 100%;
