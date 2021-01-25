@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { db } from ".."
+import { Page } from "../components/Page"
 import { Chest, generateRandomChest } from "../modules/UI"
 
 export default function Store(){
@@ -11,12 +12,18 @@ export default function Store(){
         db.useMoney(price)        
     }
 
-    return <div className="page store">
-        <button
-            onClick={() => handleOpenNewChest(20)}
-        >Open new chest</button>
-        {chest.length > 0 &&
-            <div>Chest content:</div>
-        }
-    </div>
+    return <Page
+        title='Store'
+        className='store'
+    >
+            <button
+                onClick={() => handleOpenNewChest(20)}
+            >
+                Open new chest
+            </button>
+            
+            {chest.length > 0 &&
+                <div>Chest content:</div>
+            }
+    </Page>
 }

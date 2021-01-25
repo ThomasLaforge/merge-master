@@ -9,18 +9,20 @@ import Store from "./pages/Store";
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/collection">
-          <Collection />
-        </Route>
-        <Route path="/store">
-          <Store />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route path="/collection">
+            <Collection />
+          </Route>
+          <Route path="/store">
+            <Store />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }

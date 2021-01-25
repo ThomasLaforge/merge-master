@@ -1,0 +1,9 @@
+.heroes-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .heroes-list-elt {
+        padding-inline: 10px;
+    }
+}

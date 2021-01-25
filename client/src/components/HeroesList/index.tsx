@@ -3,6 +3,8 @@ import {db} from '../../index'
 import Hero from '../Hero/index'
 import {getAllHeroes, HeroType} from '../../modules/definitions'
 
+import './style.scss'
+
 const heroes = getAllHeroes()
 
 export default function HeroesList(){
@@ -12,7 +14,9 @@ export default function HeroesList(){
             {heroes.map( (hType: HeroType, k: number) => {
                 const myData = myHeroes.find(myH => myH.id === hType)
                 // const hero = new MyHero(myData?.number)
-                return <Hero id={hType} number={myData?.number} key={k} />
+                return <div className="heroes-list-elt" key={k}>
+                    <Hero id={hType} number={myData?.number} />
+                </div>
             })}
         </div>
     )
