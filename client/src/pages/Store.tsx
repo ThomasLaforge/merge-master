@@ -8,8 +8,9 @@ export default function Store(){
     
     const handleOpenNewChest = (price: number) => {
         const newChest = generateRandomChest(price)
+        db.useMoney(price)
+        db.addChest(newChest)
         setChest(newChest)
-        db.useMoney(price)        
     }
 
     return <Page
