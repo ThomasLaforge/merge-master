@@ -1,0 +1,14 @@
+$building-box-size: 150px;
+
+.buildings {
+    display: flex;
+    flex-direction: row;
+
+    .building {
+        height: $building-box-size;
+        width: $building-box-size;
+        border: 1px solid white;
+        color: white;
+        margin: 0 20px;
+    }
+}
