@@ -1,6 +1,6 @@
 import {db} from '../../index'
 // import MyHero from "../modules/Hero"
-import Hero from '../Hero/index'
+import { CollectionHero } from '../Hero/index'
 import {getAllHeroes, HeroType} from '../../modules/definitions'
 
 import './style.scss'
@@ -15,7 +15,7 @@ export default function HeroesList(){
                 const myData = myHeroes.find(myH => myH.id === hType)
                 // const hero = new MyHero(myData?.number)
                 return <div className="heroes-list-elt" key={k}>
-                    <Hero id={hType} number={myData?.number} />
+                    <CollectionHero id={hType} number={myData?.number} />
                 </div>
             })}
         </div>

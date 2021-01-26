@@ -10,19 +10,18 @@ export default class Hero {
     get stockState(){
         let rest = this.amount
         let level = 0
+        let levelNeedings = 0
+
         while(rest > 0){
-            rest -= Math.pow(2, level + 1) 
             level++
+            levelNeedings = Math.pow(2, level) 
+            rest -= levelNeedings
         }
-        console.log({
-            level,
-            neededForNextLevel: Math.pow(2, level),
-            currentOnLevel: -rest
-        })
+
         return {
             level,
-            neededForNextLevel: Math.pow(2, level + 1),
-            currentOnLevel: -rest
+            neededForNextLevel: levelNeedings,
+            currentOnLevel: levelNeedings - Math.abs(rest)
         }
     }
 

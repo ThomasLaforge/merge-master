@@ -18,6 +18,8 @@ export function getAllHeroes(){
     ]
 }
 
+export const NB_HERO_TYPE =  getAllHeroes().length
+
 export interface HeroStats {
 
 }

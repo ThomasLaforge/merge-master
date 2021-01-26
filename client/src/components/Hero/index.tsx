@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import {HeroType} from '../../modules/definitions'
 import MyHero from '../../modules/Hero'
 
@@ -28,20 +29,43 @@ const getHeroName = (type: HeroType) => {
 
 interface HeroProps {
     id: HeroType,
-    number?: number
+    number?: number,
 }
 
-export default function Hero(props: HeroProps){
-    const {id, number} = props
-    const hero = new MyHero(number)
-    const {level} = hero
+interface BaseHeroProps extends HeroProps {
+    children: ReactNode
+}
+
+export default function BaseHero(props: BaseHeroProps){
+    const {id, number, children} = props
 
     return <div className={"hero " + getHeroClassName(id)}>
         <div className="hero-name">
             {getHeroName(id)}
         </div>
-        {(level || level === 0) && 
-            <div className="hero-level">{level}</div>
-        }
+        {children}
     </div>
+}
+
+export function CollectionHero(props: HeroProps){
+    const {number} = props
+    const hero = new MyHero(number)
+    const {level, currentOnLevel, neededForNextLevel} = hero.stockState
+    return (
+        <BaseHero {...props}>
+            <div className="hero-collection-stats">
+                <div className="hero-level">{level || 0}</div>
+                <div className="hero-next-level-info">{currentOnLevel} / {neededForNextLevel}</div>
+            </div>
+        </BaseHero>
+    )
+}
+
+export function ChestHero(props: HeroProps){
+    const {number} = props
+    return (
+        <BaseHero {...props}>
+            <div className="hero-chest-number">x {number}</div>
+        </BaseHero>
+    )
 }
