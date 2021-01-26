@@ -1,4 +1,5 @@
 import { CompoData, HeroCollection, Teams } from "./definitions"
+import { Chest } from "./UI"
 
 export default class Database {
 
@@ -30,13 +31,23 @@ export default class Database {
         this.setElement('myTeams', newTeams)
     }
 
+    addChest(chest: Chest){
+        chest.forEach(h => {
+            this.addHeroes(h.id, h.number)
+        })
+    }
+
+    addMoney(amount: number){
+        this.setElement('money', this.getElement('money', 0) + amount)
+    }
+
     useMoney(amount: number){
         const currentMoney = this.getElement('money', 0)
         const newMoney = currentMoney - amount
         if(newMoney < 0){
             console.warn('you are using more money than you have')
         }
-        this.setElement('money', newMoney)
+        this.setElement('money', currentMoney)
     }
 
     getElement(key: string, defaultValue: any){
