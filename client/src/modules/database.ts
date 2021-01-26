@@ -16,7 +16,7 @@ export default class Database {
         else {
             newHeroes.push({ id: type, number: amount })
         }
-        this.setElement('myHeroes', JSON.stringify(newHeroes))
+        this.setElement('myHeroes', newHeroes)
     }
 
     getTeams(){
